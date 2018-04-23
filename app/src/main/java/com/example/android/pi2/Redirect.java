@@ -75,6 +75,9 @@ public class Redirect extends AppCompatActivity {
         alunos.child(uid).child("Nome").setValue(nome);
         alunos.child(uid).child("Data Nascimento").setValue(dataNascimento);
         alunos.child(uid).child("Sexo").setValue(sexo);
+
+        // Temos que arrumar esta parte pra ficar um botão certo pra ir pra esta parte do MAPS.
+        startActivity(new Intent(Redirect.this, GoogleMapa.class));
     }
 
     private void logoff(){
